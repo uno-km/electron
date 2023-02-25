@@ -4,37 +4,28 @@
     <meta charset="UTF-8" />
     <title>Hello World!</title>
     <link rel="stylesheet" href="index.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   </head>
   <body>
-    <header role="banner">
-      <img src="source\img\logo.png" width="64" height="auto" alt="scroll magic">
-      <nav class="anchor-nav" role="navigation">
-        <a href="#intro" id="intro-anchor">Intro</a>
-        <a href="#section-1" id="anchor1">Section 1</a>
-        <a href="#section-2" id="anchor2">Section 2</a>
-        <a href="#section-3" id="anchor3">Section 3</a>
-      </nav>
-    </header>
-    <main class="full-screen" id="intro" role="main">
-      <section class="full-screen blue" id="start">
-        <h1>Anchor Navigation</h1>
-      </section>
-      <section class="full-screen orange" id="section-1">
-        <div>
-          <p>Section Uno</p>
+    <div class="container">
+      <div class="title-bar">
+        <div class="title prevent-select draggable">
+          <img src="source\img\logo.png" width="32" height="auto" alt="scroll magic">
+          나의 커스텀 타이틀바</div>
+        <div class="control prevent-select">
+          <button id="min">
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <button id="max">
+            <i class="bi bi-arrows-fullscreen"></i>
+          </button>
+          <button id="close">
+            <i class="bi bi-x-lg"></i>
+          </button>
         </div>
-      </section>
-      <section class="full-screen red" id="section-2">
-        <div>
-          <p>Section Dos</p>
-        </div>
-      </section>
-      <section class="full-screen blue" id="section-3">
-        <div>
-          <p>Section Tres</p>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
   </body>
   <script src="script/main/main.js"></script>
 </html>
