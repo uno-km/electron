@@ -1,14 +1,14 @@
 const { app, BrowserWindow, Menu, shell } = require('electron');
-//import setMenu from "script/menu/setMenu.js";
 const path = require('path') 
 function createWindow () { 
   const win = new BrowserWindow({ 
-    width: 800, 
-    height: 600, 
-    webPreferences: { 
+    width: 800
+    ,height: 600
+    ,frame : false
+    ,webPreferences: { 
       preload: path.join(__dirname, 'preload.js') 
     } 
-  }) 
+  })
   win.loadFile('src/index.html')
 }
 /**
