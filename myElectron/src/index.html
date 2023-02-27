@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="title-bar">
-        <div class="title prevent-select draggable">
-          <img src="source\img\logo.png" width="32" height="auto" alt="scroll magic">
-          나의 커스텀 타이틀바</div>
-        <div class="control prevent-select">
-          <button id="min">
-            <i class="bi bi-chevron-down"></i>
-          </button>
-          <button id="max">
-            <i class="bi bi-arrows-fullscreen"></i>
-          </button>
-          <button id="close">
-            <i class="bi bi-x-lg"></i>
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="title-bar">
+      <div class="title prevent-select draggable">
+        <img src="source\img\logo.png" width="32" height="auto" alt="scroll magic">
+        <a>나의 커스텀 타이틀바</a>
+      </div>
+      <div class="control prevent-select">
+        <button class="title-bar-button min">
+          <i class="bi bi-chevron-down min"></i>
+        </button>
+        <button class="title-bar-button max">
+          <i class="bi bi-arrows-fullscreen max"></i>
+        </button>
+        <button class="title-bar-button close">
+          <i class="bi bi-x-lg close"></i>
+        </button>
       </div>
     </div>
-  </body>
-  <script src="script/main/main.js"></script>
+    <nav class="main-menu">
+      <div class="settings"></div>
+      <div class="scrollbar" id="style-1">
+        <ul id = 'commonMenu'></ul>
+      </div>
+    </nav>
+  </div>
+</body>
+<script src="titlebar.js"></script>
+<script src="script/menu/setMenu.js"></script>
 </html>
