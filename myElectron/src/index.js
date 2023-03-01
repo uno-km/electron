@@ -1,17 +1,17 @@
 const { app, BrowserWindow, Menu, shell, ipcMain } = require('electron');
 const path = require('path')
 const ipc = ipcMain;
-function createWindow () { 
-  const win = new BrowserWindow({ 
+function createWindow () {
+  const win = new BrowserWindow({
     width: 800
     ,height: 600
     ,frame : false
-    ,webPreferences: { 
-      preload: path.join(__dirname, 'preload.js') 
+    ,webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
       ,nodeIntegration: true
       ,contextIsolation : false
       ,contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
-    } 
+    }
   })
   win.loadFile('src/index.html')
   /**
@@ -34,57 +34,57 @@ function createWindow () {
 */
 {
 /*start*/
-const template = 
+const template =
 [
-  { 
+  {
     label: "File"
-    ,submenu: 
-    [ 
-      { 
+    ,submenu:
+    [
+      {
         label   : "Open"
-        , click : (ev)=>{ 
+        , click : (ev)=>{
           console.log('Clicked Menu Open!!!');
         }
       }
       ,{type : "separator"}
-      ,{ 
-        label   : "New" 
+      ,{
+        label   : "New"
       }
-      ,{ 
+      ,{
         label: 'Dark Mode'
         , type: 'checkbox'
-        , checked: true 
+        , checked: true
       }
-    ] 
+    ]
   }
-  ,  { 
+  ,  {
     label: "Dev"
-    ,submenu: 
-    [ 
-      { 
-        role   : "toggleDevTools" 
+    ,submenu:
+    [
+      {
+        role   : "toggleDevTools"
       }
-    ] 
-  }  ,  { 
+    ]
+  }  ,  {
     label: "Help"
-    ,submenu: 
-    [ 
-      { 
-        label   : "Api" 
-        , click : (ev)=>{ 
+    ,submenu:
+    [
+      {
+        label   : "Api"
+        , click : (ev)=>{
           shell.openExternal("https://www.electronjs.org/docs/latest/api/app");
         }
       }
-    ] 
+    ]
   }
-]; 
-const menu = Menu.buildFromTemplate(template); 
+];
+const menu = Menu.buildFromTemplate(template);
 /*end*/
 }
 
-app.whenReady().then(() => { 
-  createWindow() 
+app.whenReady().then(() => {
+  createWindow()
 })
-app.on('window-all-closed', function () { 
-  if (process.platform !== 'darwin') app.quit() 
+app.on('window-all-closed', function () {
+  if (process.platform !== 'darwin') app.quit()
 })
