@@ -1,4 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import SideMenu from '../../src/script/menu/setMenu'
+import { createRoot } from 'react-dom';
 
-ReactDom.render(<h1>Hello React App</h1>, document.getElementById('root'));
+createRoot(document.getElementById('root')).render(
+<SideMenu/>
+);
+/*ReactDom.render(
+<>
+<SideMenu/>
+</>, document.getElementById('root')
+);*/

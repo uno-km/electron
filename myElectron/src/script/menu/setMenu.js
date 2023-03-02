@@ -39,7 +39,7 @@ function drawCommonMenuList()
     </li>`
   }
   commonMenuList.forEach((el)=>{
-    
+
   });
   document.querySelector('#commonMenu').innerHTML = struct;
 }

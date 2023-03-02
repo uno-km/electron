@@ -2,17 +2,27 @@
 <html>
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>myElerctron Project</title>
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/menu.css" />
+  <script defer type="module" src="../functions/node_modules/firebase-admin/lib/firebase-app.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-auth.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-database.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-firestore.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-functions.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-messaging.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-storage.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-analytics.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-remote-config.js"></script>
+      <script defer type="module" src="../node_modules/firebase/firebase-performance.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet">
 </head>
 <body>
-  <div id="root"></div>
- <!--<script type="module" src="script/main/app.js"></script>
   <div class="container">
     <div class="title-bar">
       <div class="title prevent-select draggable">
@@ -34,11 +44,12 @@
     <nav class="main-menu">
       <div class="settings"></div>
       <div class="scrollbar" id="style-1">
-        <ul id = 'commonMenu'></ul>
+        <ul id='commonMenu'></ul>
       </div>
     </nav>
-  </div>-->
+  </div>
 </body>
-<!--<script src="titlebar.js"></script>-->
-<!--<script src="script/menu/setMenu.js"></script>-->
+<script src="titlebar.js"></script>
+<script src="script/menu/setMenu.js"></script>
+<script type="module" src="config/firebase.js"></script>
 </html>
